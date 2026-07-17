@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "overture2gmns"
+version = "0.1.0"
+description = "Convert Overture Maps transportation data to GMNS networks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "overture2gmns contributors"}
+]
+keywords = ["Overture Maps", "GMNS", "transportation", "network", "GIS"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: GIS",
+]
+dependencies = [
+  "shapely>=2.0",
+  "pyproj>=3.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/xzhou99/overture2gmns"
+Repository = "https://github.com/xzhou99/overture2gmns"
+Issues = "https://github.com/xzhou99/overture2gmns/issues"
+
+[project.optional-dependencies]
+download = ["overturemaps[geopandas]>=0.14"]
+geoparquet = ["pyarrow>=16"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+overture2gmns = "overture2gmns.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+overture2gmns = ["py.typed"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,10 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type": "Feature", "id": "connector-west", "geometry": {"type": "Point", "coordinates": [-111.9400, 33.4200]}, "properties": {"type": "connector"}},
+    {"type": "Feature", "id": "connector-center", "geometry": {"type": "Point", "coordinates": [-111.9350, 33.4200]}, "properties": {"type": "connector"}},
+    {"type": "Feature", "id": "connector-east", "geometry": {"type": "Point", "coordinates": [-111.9300, 33.4200]}, "properties": {"type": "connector"}},
+    {"type": "Feature", "id": "connector-south", "geometry": {"type": "Point", "coordinates": [-111.9350, 33.4175]}, "properties": {"type": "connector"}},
+    {"type": "Feature", "id": "connector-north", "geometry": {"type": "Point", "coordinates": [-111.9350, 33.4225]}, "properties": {"type": "connector"}}
+  ]
+}

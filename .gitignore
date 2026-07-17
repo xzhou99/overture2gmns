@@ -1,0 +1,17 @@
+# local development workspaces and large data — never committed
+dev/
+git_release/
+bench/out/
+*.osm.pbf
+*.parquet
+
+# python build artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+
+# local scratch
+*.log

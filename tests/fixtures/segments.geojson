@@ -1,0 +1,54 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "segment-main-street",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-111.9400, 33.4200], [-111.9350, 33.4200], [-111.9300, 33.4200]]
+      },
+      "properties": {
+        "theme": "transportation",
+        "type": "segment",
+        "version": 3,
+        "subtype": "road",
+        "class": "primary",
+        "names": {"primary": "Main Street"},
+        "connectors": [
+          {"connector_id": "connector-west", "at": 0.0},
+          {"connector_id": "connector-center", "at": 0.5},
+          {"connector_id": "connector-east", "at": 1.0}
+        ],
+        "speed_limits": [
+          {"between": [0.0, 0.5], "max_speed": {"value": 35, "unit": "mph"}},
+          {"between": [0.5, 1.0], "max_speed": {"value": 25, "unit": "mph"}}
+        ],
+        "access_restrictions": [
+          {"access_type": "denied", "when": {"heading": "backward"}}
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "segment-cross-street",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-111.9350, 33.4175], [-111.9350, 33.4200], [-111.9350, 33.4225]]
+      },
+      "properties": {
+        "theme": "transportation",
+        "type": "segment",
+        "version": 1,
+        "subtype": "road",
+        "class": "secondary",
+        "names": {"primary": "Cross Street"},
+        "connectors": [
+          {"connector_id": "connector-south", "at": 0.0},
+          {"connector_id": "connector-center", "at": 0.5},
+          {"connector_id": "connector-north", "at": 1.0}
+        ]
+      }
+    }
+  ]
+}
